@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.6" client="site" method="upgrade">
+	<name>MOD_USERIDEASCATEGORIES</name>
+	<author>Todor Iliev</author>
+	<copyright>Copyright (C) 2016 Todor Iliev ( ITPrism.com )</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.en.html GNU/GPLv3</license>
+	<authorEmail>todor@itprism.com</authorEmail>
+	<authorUrl>http://itprism.com</authorUrl>
+	<version>1.0</version>
+	<creationDate>17 November, 2016</creationDate>
+	<description><![CDATA[
+    <p>UserIdeas Categories is a module that displays the categories of the component.</p>
+    <p><a href="http://itprism.com/" target="_blank">Subscribe for the newsletter</a> to receive <strong>gifts</strong>, <strong>discount codes</strong>, information about <strong>updates</strong> and information about <strong>new ITPrism extensions</strong>.</p>
+    <p>Please, <a href="http://extensions.joomla.org/extensions/contacts-and-feedback/testimonials-a-suggestions/24422" target="_blank">vote for the extension</a> on Joomla! Extensions Directory</p>
+    ]]></description>
+	
+    <help url="MOD_USERIDEASCATEGORIES_HELP_URL"/>
+
+	<files>
+	    <filename module="mod_userideascategories">mod_userideascategories.php</filename>
+        <folder>language</folder>
+		<folder>tmpl</folder>
+	</files>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+                <field name="show_title" type="radio" class="btn-group btn-group-yesno" label="MOD_USERIDEASCATEGORIES_CATEGORY_TITLE" description="MOD_USERIDEASCATEGORIES_CATEGORY_TITLE_DESC" default="1">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+
+                <field name="show_description" type="radio" class="btn-group btn-group-yesno" default="0" label="MOD_USERIDEASCATEGORIES_CATEGORY_DESCRIPTION" description="MOD_USERIDEASCATEGORIES_CATEGORY_DESCRIPTION_DESC">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+
+                <field name="show_image"
+                       type="radio"
+                       class="btn-group btn-group-yesno"
+                       default="0"
+                       label="MOD_USERIDEASCATEGORIES_CATEGORY_IMAGE"
+                       description="MOD_USERIDEASCATEGORIES_CATEGORY_IMAGE_DESC">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+
+                <field name="show_items_number"
+                       type="radio"
+                       class="btn-group btn-group-yesno"
+                       default="0"
+                       label="MOD_USERIDEASCATEGORIES_ITEMS_NUMBER"
+                       description="MOD_USERIDEASCATEGORIES_ITEMS_NUMBER_DESC">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+            </fieldset>
+			
+			<fieldset name="advanced">
+                <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+                <field
+                    name="moduleclass_sfx"
+                    type="text"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+                    
+                <field
+                    name="cache"
+                    type="list"
+                    default="0"
+                    label="COM_MODULES_FIELD_CACHING_LABEL"
+                    description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+            </fieldset>
+		</fields>
+	</config>
+
+    <updateservers>
+        <server type="extension" priority="1" name="Module - UserIdeas Categories">http://cdn.itprism.com/updates/userideas/mod_userideascategories.xml</server>
+    </updateservers>
+</extension>
